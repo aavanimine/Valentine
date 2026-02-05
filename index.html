@@ -2,87 +2,92 @@
 <html>
 <head>
   <title>nte shuttun 🤍😘</title>
-  <link rel="stylesheet" href="body {
-  margin: 0;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #ff5f9e, #ffc3d8);
-  font-family: 'Arial', sans-serif;
-  text-align: center;
-  color: white;
-  overflow: hidden;
-}
 
-h1 {
-  margin-top: 30px;
-  font-size: 42px;
-  text-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ff5f9e, #ffc3d8);
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+    }
 
-.note {
-  font-size: 20px;
-  margin: 15px 20px 25px;
-}
+    h1 {
+      margin-top: 30px;
+      font-size: 42px;
+      text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
 
-.gallery img {
-  width: 160px;
-  margin: 10px;
-  border-radius: 18px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-  transition: transform 0.3s;
-}
+    .note {
+      font-size: 20px;
+      margin: 15px 20px 25px;
+    }
 
-.gallery img:hover {
-  transform: scale(1.05);
-}
+    .gallery img {
+      width: 180px;
+      margin: 10px;
+      border-radius: 18px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
 
-/* Big Romantic Button */
-button {
-  background: #fff;
-  color: #ff2f7a;
-  padding: 18px 40px;
-  border: none;
-  border-radius: 50px;
-  font-size: 22px;
-  font-weight: bold;
-  margin-top: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
 
-button:hover {
-  transform: scale(1.08);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
-}
+    /* Big Romantic Button */
+    button {
+      background: #fff;
+      color: #ff2f7a;
+      padding: 20px 45px;
+      border: none;
+      border-radius: 50px;
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 25px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
 
-/* Flying heart animation */
-.heart {
-  position: fixed;
-  bottom: -20px;
-  font-size: 24px;
-  animation: fly 6s linear infinite;
-  opacity: 0.8;
-}
+    button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+    }
 
-@keyframes fly {
-  0% {
-    transform: translateY(0) translateX(0);
-    opacity: 0;
-  }
-  10% { opacity: 1; }
-  100% {
-    transform: translateY(-110vh) translateX(40px);
-    opacity: 0;
-  }
-}">
+    /* Flying heart animation */
+    .heart {
+      position: fixed;
+      bottom: -20px;
+      font-size: 24px;
+      animation: fly 6s linear infinite;
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    @keyframes fly {
+      0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+      }
+      10% { opacity: 1; }
+      100% {
+        transform: translateY(-110vh) translateX(40px);
+        opacity: 0;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
- <h1>For You shiiii🤍</h1>
-  <p class="note">love you shutttuoooo😘😘💋💋</p>
+  <h1>For You shiiii 🤍</h1>
+  <p class="note">Love you shutttuoooo 😘😘💋💋</p>
 
   <div class="gallery">
-    <img src="pic1.png">
+    <img src="pic1.png" alt="My Love">
   </div>
 
   <button onclick="playSong()">Play Our Song 🎵</button>
@@ -93,26 +98,22 @@ button:hover {
     function playSong() {
       document.getElementById("song").play();
     }
+
+    // Create flying hearts 🤍
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerHTML = "🤍";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = (20 + Math.random() * 20) + "px";
+      heart.style.animationDuration = (4 + Math.random() * 4) + "s";
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 7000);
+    }, 500);
   </script>
 
-<<script>
-  function playSong() {
-    document.getElementById("song").play();
-  }
-
-  // Create flying hearts
-  setInterval(() => {
-    const heart = document.createElement("div");
-    heart.className = "heart";
-    heart.innerHTML = "🤍";
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.fontSize = (20 + Math.random() * 20) + "px";
-    heart.style.animationDuration = (4 + Math.random() * 4) + "s";
-    document.body.appendChild(heart);
-
-    setTimeout(() => {
-      heart.remove();
-    }, 7000);
-  }, 500);
-</script>/body>
+</body>
 </html>
